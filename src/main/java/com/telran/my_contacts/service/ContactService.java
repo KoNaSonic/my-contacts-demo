@@ -1,6 +1,8 @@
 package com.telran.my_contacts.service;
 
 import com.telran.my_contacts.model.dto.ContactDto;
+import com.telran.my_contacts.model.entity.PhoneNumber;
+import com.telran.my_contacts.model.entity.User;
 
 
 import java.util.List;
@@ -8,18 +10,20 @@ import java.util.List;
 
 public interface ContactService {
 
-    void addContact(ContactDto contactDto);
+//    void addContact(ContactDto contactDto);
+//
+//    ContactDto getContact(Long id);
+//
+//    void updateContact(Long id, ContactDto contactDto);
+//
+//    void deleteContact(Long id);
 
-    ContactDto getContact(Long id);
+    List<ContactDto> getAllContactsByName(String fullName);
 
-    void updateContact(Long id, ContactDto contactDto);
+    List<ContactDto> getAllContactsByPhoneNumber(String phoneNumber);
 
-    void deleteContact(Long id);
-
-    ContactDto getContactsByName(String fullName);
-
-    ContactDto getContactsByPhone(String phoneNumber);
-
+//    ContactDto getContactsByPhone(String phoneNumber);
+//
     List<ContactDto> getAllContacts();
 
 
